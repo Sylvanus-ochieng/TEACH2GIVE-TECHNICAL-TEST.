@@ -1,19 +1,81 @@
-FIZZBUZZ
-class Main {
-n = int(input())
-count3,count5 = 1,1
-for i in range(1,n+1):
-  if count3 == 3 and count5 == 5:
-      print("FizzBuzz")
-      count3,count5 = 0,0
-  elif count3 == 3:
-    print("Fizz")
-    count3 = 0
-  elif count5 == 5:
-    print("Buzz")
-    count5= 0
-  else:
-    print(i)
-  count3 += 1
-  count5 += 1.
-  
+1. # code to take in integers from 1-100 and print FizzBuzz if its a multiple of both 3 and 5 Fizz if a multiple of of 3 and Buzz if a multiple of 5.
+for i in range(100):
+    if i % 3 == 0 and i % 5 == 0:
+        print("fizzbuzz")
+        continue
+    elif i % 3 == 0:
+        print("fizz")
+        continue
+    elif i % 5 == 0:
+        print("buzz")
+        continue
+    print(i) 
+
+
+
+ 2.# code for fibonacci sequence upto 100.
+i = 100
+num1 = 0
+num2 = 1
+next_number = num2 
+count = 1
+while count <= i:
+	print(next_number, end=" ")
+	count += 1
+	num1, num2 = num2, next_number
+	next_number = num1 + num2
+print()
+
+
+3. # Program to check if given integer is a power of 2
+def isPowerOfTwo(n):
+	if (n == 0):
+		return False
+	while (n != 1):
+			if (n % 2 != 0):
+				return False
+			n = n // 2
+	return True
+if(isPowerOfTwo(31)):
+	print('Yes')
+else:
+	print('No')
+if(isPowerOfTwo(64)):
+	print('Yes')
+else:
+	print('No')
+
+
+
+4. #program to capitalize
+from string import capwords
+
+original_string = "capitalize first letter"
+capitalized_string = capwords(original_string)
+
+print("Original String:", original_string)
+print("Capitalized String:", capitalized_string)
+
+
+
+5. #A program that takes integers as input and prints the integer in reversed format.
+num = int(input("Enter any positive integer  "))
+reversed_num = 0
+while num != 0:
+    digit = num % 10
+    reversed_num = reversed_num * 10 + digit
+    num //= 10
+print("Reversed Number: " + str(reversed_num))
+
+
+
+6.#A program to count the number of vowels in a sentence.
+def vowel_count(str):
+	count = 0
+	vowel = set("aeiouAEIOU")
+	for alphabet in str:
+		if alphabet in vowel:
+			count = count + 1
+	print("No. of vowels :", count)
+str =str(input("Enter any string "))
+vowel_count(str)
